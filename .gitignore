@@ -23,6 +23,9 @@ coverage/*
 *.log
 .DS_Store
 bin/bitcoin*
+bin/ufod*
+bin/ufo-*
+bin/ufocore-0*
 bin/SHA256SUMS.asc
 regtest/data/node1/regtest
 regtest/data/node2/regtest

@@ -1,13 +1,13 @@
 {
-  "name": "bitcore-node",
-  "description": "Full node with extended capabilities using Bitcore and Bitcoin Core",
+  "name": "ufocore-node",
+  "description": "Full node with extended capabilities using UFOcore and UFO Core",
   "author": "BitPay <dev@bitpay.com>",
   "version": "3.1.3",
   "main": "./index.js",
-  "repository": "git://github.com/bitpay/bitcore-node.git",
-  "homepage": "https://github.com/bitpay/bitcore-node",
+  "repository": "git://github.com/fiscalobject/ufocore-node.git",
+  "homepage": "https://github.com/fiscalobject/ufocore-node",
   "bugs": {
-    "url": "https://github.com/bitpay/bitcore-node/issues"
+    "url": "https://github.com/fiscalobject/ufocore-node/issues"
   },
   "contributors": [
     {
@@ -24,35 +24,36 @@
     {
       "name": "Patrick Nagurny",
       "email": "patrick@bitpay.com"
+    },
+    {
+      "name": "Peter Bushnell",
+      "email": "peter.bushnell@ufobject.com"
     }
   ],
   "bin": {
-    "bitcore-node": "./bin/bitcore-node",
-    "bitcoind": "./bin/bitcoind"
+    "ufocore-node": "ufocore-node",
+    "ufod": "./bin/ufod"
   },
   "scripts": {
     "preinstall": "./scripts/download",
-    "verify": "./scripts/download --skip-bitcoin-download --verify-bitcoin-download",
-    "test": "mocha -R spec --recursive",
-    "regtest": "./scripts/regtest",
     "jshint": "jshint --reporter=node_modules/jshint-stylish ./lib",
     "coverage": "istanbul cover _mocha -- --recursive",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "bitcoin",
-    "bitcoind"
+    "ufo",
+    "ufod"
   ],
   "dependencies": {
     "async": "^1.3.0",
-    "bitcoind-rpc": "^0.6.0",
-    "bitcore-lib": "^0.13.13",
     "body-parser": "^1.13.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",
     "errno": "^0.1.4",
     "express": "^4.13.3",
     "liftoff": "^2.2.0",
+    "ufod-rpc": "^0.7.1",
+    "ufocore-lib": "^0.13.19",
     "lru-cache": "^4.0.1",
     "mkdirp": "0.5.0",
     "path-is-absolute": "^1.0.0",
@@ -67,7 +68,7 @@
   },
   "devDependencies": {
     "benchmark": "1.0.0",
-    "bitcore-p2p": "^1.1.0",
+    "ufocore-p2p": "^1.1.0",
     "chai": "^3.5.0",
     "coveralls": "^2.11.9",
     "istanbul": "^0.4.3",
