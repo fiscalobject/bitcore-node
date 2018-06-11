@@ -1,4 +1,4 @@
 #!/usr/bin/env node
 
-var ufocore = require('../lib/cli/ufocore');
+var ufocore = require('../lib/cli/bitcore');
 ufocore();
